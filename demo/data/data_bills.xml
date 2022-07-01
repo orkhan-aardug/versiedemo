@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+        <record id="mrp_bom_tafel" model="mrp.bom">
+            <field name="product_tmpl_id" ref="test_product_ronde_tafel"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="mrp_bom_manufacture_line_1" model="mrp.bom.line">
+            <field name="product_id" ref="demo.test_product_tafel_poot"/>
+            <field name="product_qty">4</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="bom_id" ref="demo.mrp_bom_tafel"/>
+        </record>
+
+        <record id="mrp_bom_manufacture_line_2" model="mrp.bom.line">
+            <field name="product_id" ref="demo.test_product_table_top"/>
+            <field name="product_qty">4</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="bom_id" ref="demo.mrp_bom_tafel"/>
+        </record>
+
+        <record id="mrp_bom_manufacture_line_3" model="mrp.bom.line">
+            <field name="product_id" ref="demo.test_product_bout"/>
+            <field name="product_qty">10</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="bom_id" ref="demo.mrp_bom_tafel"/>
+        </record>
+
+        <record id="mrp_bom_manufacture_line_4" model="mrp.bom.line">
+            <field name="product_id" ref="demo.test_product_schroef"/>
+            <field name="product_qty">20</field>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="bom_id" ref="demo.mrp_bom_tafel"/>
+        </record>
+
+
+
+
+
+                    <!-- SALE ORDER LINES -->
+        <!--
+        <record id="offer_bom_sale_order" model="sale.order">
+            <field name="partner_id" ref="demo.company_teham_pongers"/>
+        </record>
+
+        <record id="sales_order_line_1" model="sale.order.line">
+            <field name="product_id" ref="demo.test_product_bout"/>
+            <field name="product_uom_qty" >20.00</field>
+            <field name="order_id" ref="offer_bom_sale_order"/>
+        </record>
+        -->
+
+    <!--
+         INKOOP PRODUCTEN
+
+        <record id="inkoop_tafel_top" model="product.template">
+            <field name="seller_ids" ref="demo.company_bol_com"/>
+            <field name="reordering_min_qty">5</field>
+        </record>
+
+    -->
+
+
+
+</odoo>
